@@ -1,0 +1,66 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package J07054;
+
+
+/**
+ *
+ * @author admin
+ */
+public class SinhVien implements Comparable<SinhVien> {
+    private String ma;
+    private String ten;
+    private float diem1;
+    private float diem2;
+    private float diem3;
+    private float diemtb;
+    private int stt;
+    static int cnt = 1;
+    
+
+    public SinhVien(String ten, float diem1, float diem2, float diem3) {
+        ma = String.format("SV%02d", cnt++);
+        this.ten = chuanhoa(ten);
+        this.diem1 = diem1;
+        this.diem2 = diem2;
+        this.diem3 = diem3;
+        diemtb = (diem1*3 + diem2*3 + diem3*2)/8;
+    }
+
+    public void setStt(int stt) {
+        this.stt = stt;
+    }
+
+    public String getMa() {
+        return ma;
+    }
+
+    public float getDiemtb() {
+        return diemtb;
+    }
+
+    @Override
+    public int compareTo(SinhVien o) {
+        if(diemtb != o.getDiemtb()){
+            return Float.compare(o.getDiemtb(), diemtb);
+        }
+        return ma.compareTo(o.getMa());
+    }
+
+    @Override
+    public String toString() {
+        return ma + " " + ten + " " + String.format("%.2f", diemtb) + " " + stt;
+    }
+    
+    private static String chuanhoa(String s){
+        String[] a = s.trim().split("\\s+");
+        String res = "";
+        for(String i : a){
+            res += Character.toString(i.charAt(0)).toUpperCase() + i.substring(1).toLowerCase() + " ";
+        }
+        return res;
+    }
+    
+}
