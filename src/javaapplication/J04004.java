@@ -11,10 +11,6 @@ import java.util.Scanner;
  * @author admin
  */
 public class J04004 {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         PhanSo p1 = new PhanSo(sc.nextLong(), sc.nextLong());

@@ -16,13 +16,13 @@ import java.io.*;
 public class TaoFile {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         Scanner sc = new Scanner(new File("DATA.in"));
-        ArrayList<String> a1 = new ArrayList<>();
-        ArrayList<String> a2 = new ArrayList<>();
+        ArrayList<Integer> a1 = new ArrayList<>();
+        ArrayList<Integer> a2 = new ArrayList<>();
         for(int i = 0; i < 10; i++){
-            a1.add(sc.next());
+            a1.add(sc.nextInt());
         }
         for(int i = 0; i < 10; i++){
-            a2.add(sc.next());
+            a2.add(sc.nextInt());
         }
         ObjectOutputStream sc1 = new ObjectOutputStream(new FileOutputStream("DATA1.in"));
         ObjectOutputStream sc2 = new ObjectOutputStream(new FileOutputStream("DATA2.in"));

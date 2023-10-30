@@ -11,10 +11,6 @@ import java.util.Scanner;
  * @author admin
  */
 public class J04005 {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         SinhVien sv = new SinhVien(sc.nextLine(), sc.nextLine(), Double.parseDouble(sc.nextLine()), Double.parseDouble(sc.nextLine()), Double.parseDouble(sc.nextLine()));
