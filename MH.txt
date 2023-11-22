@@ -1,0 +1,16 @@
+1
+Máy tính
+Điện tử
+12000
+2
+Điện thoại
+Điện tử
+13000
+3
+Máy lạnh
+GIa dụng
+20000
+4
+Máy chiếu
+Kỹ thuật
+123000
